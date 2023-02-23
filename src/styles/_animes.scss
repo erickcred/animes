@@ -4,14 +4,16 @@
     &__content {
 
         &__list {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
+            display: flex;
+            justify-content: center;
+            flex-flow: wrap;
             gap: 16px;
+
 
             &__item {
                 cursor: pointer;
                 list-style: none;
-                max-width: 100%;
+                max-width: 180px;
                 margin-bottom: 16px;
 
                 img {
