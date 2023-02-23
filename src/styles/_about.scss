@@ -3,6 +3,7 @@
 .about {
 
     &__content {
+        padding: 0 16px;
 
         h2 {
             margin: 24px 0;
@@ -29,6 +30,10 @@
             width: 500px;
             height: 250px;
             margin: 0 auto;
+
+            @media (max-width: 768px) {
+                width: 100%;
+            }
             
             iframe {
                 width: 100%;
