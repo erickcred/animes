@@ -1,0 +1,29 @@
+@use "variaveis";
+
+.header {
+    background-color: rgba(variaveis.$corFundo1, .7);
+    padding: 8px 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__links {
+            display: flex;
+            gap: 16px;
+            
+            &__item {
+                list-style: none;
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+}

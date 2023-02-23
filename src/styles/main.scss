@@ -1,0 +1,89 @@
+@use "variaveis";
+@use "about";
+@use "header";
+@use "animes";
+
+
+@mixin text ($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: calc($fontSize + 10px);
+}
+@mixin title ($fontSize: 40px) {
+    @include text($fontSize);
+}
+
+.text--big {
+    @include text(18px);
+
+    @media (max-width: 768px) {
+        @include text(15px);
+    }
+}
+.text {
+    @include text;
+    
+    @media (max-width: 768px) {
+        @include text(14px);
+    }
+}
+.text--small {
+    @include text(12px);
+
+    @media (max-width: 768px) {
+        @include text(11px);
+    }
+}
+
+.title--big {
+    @include title(44px);
+
+    @media (max-width: 768px) {
+        @include title(26px);
+    }
+}
+.title {
+    @include title;
+
+    @media (max-width: 768px) {
+        @include title(24px);
+    }
+}
+.title--small {
+    @include title(28px);
+
+    @media (max-width: 768px) {
+        @include title(22px);
+    }
+}
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: variaveis.$corTexto;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+section {
+    padding: 20px 0;
+}
+
+body {
+    background: linear-gradient(
+        90deg,
+        rgba(variaveis.$corFundo1, 1) 0%,
+        rgba(variaveis.$corFundo1, .9) 50%,
+        rgba(variaveis.$corFundo1, 1) 100%,
+    );
+}
