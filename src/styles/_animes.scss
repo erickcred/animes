@@ -19,6 +19,9 @@
                 @media (max-width: 768px) {
                     max-width: calc(100% / 3);
                 }
+                @media (max-width: 452px) {
+                    max-width:calc(100% / 3);
+                }
 
                 img {
                     border-radius: 10px; 
