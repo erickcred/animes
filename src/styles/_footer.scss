@@ -1,0 +1,14 @@
+@use "variaveis";
+
+.footer {
+    background-color: rgba(variaveis.$corFundo1, .7);
+    color: rgba(variaveis.$corTexto, .5);
+    margin-top: 80px;
+
+
+    &__container {
+        text-align: center;
+        padding: 20px 0 50px 0;
+        
+    }
+}
