@@ -25,6 +25,7 @@ function scripts() {
 
 exports.default = gulp.parallel([styles, minificaImagem, scripts]);
 exports.watch = function() {
+    gulp.watch("./*.html", gulp.parallel(styles, minificaImagem, scripts));
     gulp.watch("./src/styles/*.scss", gulp.parallel(styles));
     gulp.watch("./src/images/**/*", gulp.parallel(minificaImagem));
     gulp.watch("./src/scripts/*", gulp.parallel(scripts));

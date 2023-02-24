@@ -2,6 +2,7 @@
 @use "about";
 @use "header";
 @use "animes";
+@use "footer";
 
 
 @mixin text ($fontSize: 16px) {
@@ -67,16 +68,14 @@
     margin: 0;
     padding: 0;
     color: variaveis.$corTexto;
+
+
 }
 
 .container {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
-
-    // @media (max-width: 960px) {
-    //     width: 100%;
-    // }
 }
 
 section {
@@ -90,4 +89,37 @@ body {
         rgba(variaveis.$corFundo1, .9) 50%,
         rgba(variaveis.$corFundo1, 1) 100%,
     );
+}
+
+.topup {
+    border: 3px solid rgba(variaveis.$corTexto, .4);
+    border-radius: 10px;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    width: 45px;
+    height: 50px;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease .5s;
+
+    svg {
+        width: 100%;
+        height: 100%;
+        margin-left: 7px;
+        fill: rgba(variaveis.$corTexto, .4);
+    }
+
+    &:hover {
+        border: 2px solid rgba(variaveis.$corTexto, 1);
+        svg {
+            fill: rgba(variaveis.$corTexto, 1);
+        }
+    }
+
+    &--is-show {
+        visibility: visible;
+        opacity: 1;
+    }
 }
